@@ -1,7 +1,7 @@
-CLEAR_COMMAND := clear  
+CLEAR_COMMAND := clear
 
 sort:
-CLEAR_COMMAND := clear  
+	$(CLEAR_COMMAND)
 	@echo "Deleting data.db..."
 	-rm data.db
 	@echo "Deleting out0.db..."
@@ -42,11 +42,4 @@ sort_Chunk_test:
 	@echo "Deleting sort_Chunk_test.db..."
 	-rm sort_Chunk_test.db
 	@echo " Compile sort_Chunk_test ...";
-	gcc -g -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/sort_Chunk_test.c ./src/record.c ./src/sort.c ./src/merge.c ./src/chunk.c -lhp_file -lbf -o ./build/sort_Chunk_test -O2
-
-sortFileInChunks_test:
-	@$(CLEAR_COMMAND)
-	@echo "Deleting sortFileInChunks_test.db..."
-	-rm sortFileInChunks_test.db
-	@echo " Compile sortFileInChunks_test ...";
-	gcc -g -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/sortFileInChunks_test.c ./src/record.c ./src/sort.c ./src/merge.c ./src/chunk.c -lhp_file -lbf -o ./build/sortFileInChunks_test -O2
+	gcc -g -I ./include/ -L ./lib/ -Wl,-rpath,./lib/ ./examples/sort_Chunk_test.c ./src/record.c ./s

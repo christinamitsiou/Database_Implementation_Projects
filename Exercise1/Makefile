@@ -1,6 +1,6 @@
 
 # Compile all target
-all: hp bf htc
+all: hp bf ht
 
 # Compile hp_main target
 hp: 
